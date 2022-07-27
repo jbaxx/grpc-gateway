@@ -163,6 +163,10 @@ func applyTemplate(p param, reg *descriptor.Registry) (string, error) {
 	for _, svc := range p.Services {
 		var methodWithBindingsSeen bool
 		svcName := casing.Camel(*svc.Name)
+		fmt.Println(svcName)
+		fmt.Println(svcName)
+		fmt.Println(svcName)
+		fmt.Println(svcName)
 		svc.Name = &svcName
 
 		for _, meth := range svc.Methods {

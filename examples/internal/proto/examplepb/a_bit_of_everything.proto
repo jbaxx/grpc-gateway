@@ -791,7 +791,7 @@ service CamelvsSnakeEnum {
 
     rpc SnakeEnum(SnakeEnumRequest) returns (SnakeEnumResponse) {
         option (google.api.http) = {
-            get: "/v1/example/snake/{what}"
+            get: "/v1/example/snake/{who}/{what}"
         };
     }
 }
@@ -812,8 +812,14 @@ enum snake_case_enum {
     value_d = 1;
 }
 
+enum snake_case_0_enum {
+    value_e = 0;
+    value_f = 1;
+}
+
 message SnakeEnumRequest {
     snake_case_enum what = 1;
+    snake_case_0_enum who = 2;
 }
 
 message SnakeEnumResponse {}

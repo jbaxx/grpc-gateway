@@ -786,7 +786,7 @@ service SnakeEnum {
 
     rpc SnakeEnum(SnakeEnumRequest) returns (SnakeEnumResponse) {
         option (google.api.http) = {
-            get: "/v1/example/snake/{who}/{what}"
+            get: "/v1/example/snake/{who}/{what}/{where}"
         };
     }
 }
@@ -804,6 +804,7 @@ enum snake_case_0_enum {
 message SnakeEnumRequest {
     snake_case_enum what = 1;
     snake_case_0_enum who = 2;
+    pathenum.snake_case_for_import where = 3;
 }
 
 message SnakeEnumResponse {}
